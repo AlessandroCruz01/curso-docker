@@ -4,7 +4,7 @@ import socketserver
 import getpass
 
 class MyHTTPHandler(http.server.SimpleHTTPRequestHandler):
-  def log_message(self, format: str, *args: Any):
+  def log_message(self, format, *args):
     logging.info("%s - - [%s] %s\n"%(
       self.client_address[0],
       self.log_date_time_string(),
